@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLALA Вкусная страна</title>
+    <link rel="stylesheet" href="../styles/pryaniki.css">
+    <script  type="text/javascript" src="../scripts/pryaniki.js"></script>
+    <link rel="shortcut icon" href="../Project/Новая папка/media/ICON.svg">
+</head>
+
+<body>
+    <header>
+        <div></div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="item">
+                <h2>На День Рождения</h2>
+                <img src="../media/pryanik_DR.jpg">
+                <button onclick="showOrderForm('overlayDR', 'priceDR', 15, 'quantityDR')" id="button">Заказать</button>
+
+                <div id="overlayDR">
+                    <div id="formContainer">
+                        <h3>На день рождения</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantityDR', 'priceDR', 15)" id="quantityB">-</button>
+                        <input type="number" id="quantityDR" value="1"
+                            onchange="priceOnQuantityChange('priceDR', 15, 'quantity')">
+                        <button onclick="incrementQuantity('quantityDR', 'priceDR', 15)" id="quantityB">+</button>
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceDR">Текущая стоимость заказа: 15 рублей</p>
+
+                        <button onclick="document.getElementById('overlayDR').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlayDR').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('priceDR')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <h2>На Новый год</h2>
+                <img src="../media/pryanik1.jpg">
+                <button onclick="showOrderForm('overlayNY', 'priceNY', 20, 'quantityNY')" id="button">Заказать</button>
+                <div id="overlayNY">
+                    <div id="formContainer">
+                        <h3>На Новый год</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantityNY', 'priceNY', 20)" id="quantityB">-</button>
+                        <input type="number" id="quantityNY" value="1" onchange="priceOnQuantityChange('priceNY', 20)">
+                        <button onclick="incrementQuantity('quantityNY', 'priceNY', 20)" id="quantityB">+</button><br>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceNY">Текущая стоимость заказа: 20 рублей</p>
+
+                        <button onclick="document.getElementById('overlayNY').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlayNY').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('priceNY')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h2>8 марта</h2>
+                <img src="../media/march8.jpg">
+                <button onclick="showOrderForm('overlay8', 'price8', 15, 'quantity8')" id="button">Заказать</button>
+                <div id="overlay8">
+                    <div id="formContainer">
+                        <h3>8 марта</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantity8', 'price8', 15)" id="quantityB">-</button>
+                        <input type="number" id="quantity8" value="1" onchange="priceOnQuantityChange('price8', 15)">
+                        <button onclick="incrementQuantity('quantity8', 'price8', 15)" id="quantityB">+</button><br>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="price8">Текущая стоимость заказа: 15 рублей</p>
+
+                        <button onclick="document.getElementById('overlay8').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlay8').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('price8')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h2>23 февраля</h2>
+                <img src="../media/23_1.jpg">
+                <button onclick="showOrderForm('overlay23', 'price23', 15, 'quantity23')" id="button">Заказать</button>
+                <div id="overlay23">
+                    <div id="formContainer">
+                        <h3>23 февраля</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantity23', 'price23', 15)" id="quantityB">-</button>
+                        <input type="number" id="quantity23" value="1" onchange="priceOnQuantityChange('price23', 15)">
+                        <button onclick="incrementQuantity('quantity23', 'price23', 15)" id="quantityB">+</button>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="price23">Текущая стоимость заказа: 15 рублей</p>
+
+                        <button onclick="document.getElementById('overlay23').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlay23').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('price23')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="item">
+                <h2>На Пасху</h2>
+                <img src="../media/paskha.jpg">
+                <button onclick="showOrderForm('overlayEaster', 'priceEaster', 15, 'quantityEaster')"
+                    id="button">Заказать</button>
+                <div id="overlayEaster">
+                    <div id="formContainer">
+                        <h3>На Пасху</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantityEaster', 'priceEaster', 15)"
+                            id="quantityB">-</button>
+                        <input type="number" id="quantityEaster" value="1"
+                            onchange="priceOnQuantityChange('priceEaster', 15)">
+                        <button onclick="incrementQuantity('quantityEaster', 'priceEaster', 15)"
+                            id="quantityB">+</button>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceEaster">Текущая стоимость заказа: 15 рублей</p>
+
+                        <button onclick="document.getElementById('overlayEaster').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlayEaster').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('priceEaster')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <h2>Пряничный календарь</h2>
+                <img src="../media/calender.jpg">
+                <button onclick="showOrderForm('overlayCal', 'priceCal', 20, 'quantityCal')"
+                    id="button">Заказать</button>
+                <div id="overlayCal">
+                    <div id="formContainer">
+                        <h3>Пряничный календарь</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantityCal', 'priceCal', 20)" id="quantityB">-</button>
+                        <input type="number" id="quantityCal" value="1"
+                            onchange="priceOnQuantityChange('priceCal', 20)">
+                        <button onclick="incrementQuantity('quantityCal', 'priceCal', 20)" id="quantityB">+</button>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceCal">Текущая стоимость заказа: 20 рублей</p>
+
+                        <button onclick="document.getElementById('overlayCal').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlayCal').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('priceCal')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <h2>Пряник-смайлик</h2>
+                <img src="../media/logoP.png">
+                <button onclick="showOrderForm('overlaySmile', 'priceSmile', 15, 'quantitySmile')"
+                    id="button">Заказать</button>
+                <div id="overlaySmile">
+                    <div id="formContainer">
+                        <h3>Пряник-смайлик</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantitySmile', 'priceSmile', 15)" id="quantityB">-</button>
+                        <input type="number" id="quantitySmile" value="1"
+                            onchange="priceOnQuantityChange('priceSmile', 20)">
+                        <button onclick="incrementQuantity('quantitySmile', 'priceSmile', 15)" id="quantityB">+</button>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceSmile">Текущая стоимость заказа: 15 рублей</p>
+
+                        <button onclick="document.getElementById('overlaySmile').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlaySmile').style.display = 'none'"
+                            id="close">Закрыть</button><br>
+                        <button onclick="setCustomPrice('priceSmile')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Пряничные домики</h2>
+                <img src="../media/pryanic_DOM.jpg">
+                <button onclick="showOrderForm('overlayHouse', 'priceHouse', 15, 'quantityHouse')"
+                    id="button">Заказать</button>
+                <div id="overlayHouse">
+                    <div id="formContainer">
+                        <h3>Пряничные домики</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantityHouse', 'priceHouse', 15)" id="quantityB">-</button>
+                        <input type="number" id="quantityHouse" value="1"
+                            onchange="priceOnQuantityChange('priceHouse', 20)">
+                        <button onclick="incrementQuantity('quantityHouse', 'priceHouse', 15)" id="quantityB">+</button>
+
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceHouse">Текущая стоимость заказа: 15 рублей</p>
+
+                        <button onclick="document.getElementById('overlayHouse').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlayHouse').style.display = 'none'"
+                            id="close">Закрыть</button>
+                        <button onclick="setCustomPrice('priceHouse')" id="individ">Индивидуальный заказ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h2>Индивидуальный заказ</h2>
+                <img src="../media/pryanik_Nab1.jpg">
+
+                <button onclick="showOrderForm('overlayIndivid', 'priceIndivid', 'договорная', 'quantityIndivid')"
+                    id="button">Заказать</button>
+                <div id="overlayIndivid">
+                    <div id="formContainer">
+                        <h3>Индивидуальный заказ</h3><br>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name"><br>
+
+                        <label for="phone">Ваш номер телефона:</label>
+                        <input type="text" id="phone"><br><br>
+
+                        <label for="destination">Куда отправлять:</label>
+                        <input type="text" id="destination"><br><br>
+
+                        <label for="quantity">Количество:</label>
+                        <button onclick="decrementQuantity('quantityIndivid', 'priceIndivid', 'договорная')"
+                            id="quantityB">-</button>
+                        <input type="number" id="quantityIndivid" value="1">
+                        <button onclick="incrementQuantity('quantityIndivid', 'priceIndivid', 'договорная')"
+                            id="quantityB">+</button>
+
+                        <label for="date">Срок сдачи:</label>
+                        <input type="date" id="birthdayDate"><br>
+
+                        <label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea><br>
+
+                        <p id="priceIndivid">Стоимость заказа: договорная</p>
+
+                        <button onclick="document.getElementById('overlayIndivid').style.display = 'none'"
+                            id="submit">Подтвердить заказ</button>
+                        <button onclick="document.getElementById('overlayIndivid').style.display = 'none'"
+                            id="close">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+
+    <footer>
+        <div>
+            <a href="https://xn--80affa3aj0al.xn--80asehdb/#@Olala_vkusnaya_strana">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png"
+                    style="margin-top: 5px;"> Telegram
+            </a><br>
+            <a href="https://vk.com/olala_vkusnaya_strana">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/1200px-VK_Compact_Logo_%282021-present%29.svg.png"
+                    style="margin-top: 5px;"> VK
+            </a><br>
+            <a href="https://www.instagram.com/olala_vkusnaya_strana?utm_source=qr&igsh=anEyeTZ1NDdlMm1l">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+                    style="margin-top: 5px;"> Instagram
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
