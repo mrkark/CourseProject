@@ -1,0 +1,421 @@
+body {
+  background-color: #f5c79f;
+  width: auto;
+}
+
+header div {
+  background-image: url("../media/logo1.jpeg");
+  margin: -8px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+footer div {
+  width: 100.5%;
+  padding-left: 10px;
+  margin: -8px;
+  background-color: #9e5308;
+  justify-content: space-between;
+}
+
+footer div a {
+  text-decoration: none;
+  font-family: 'Dancing script', cursive;
+  color: #c4721f;
+}
+
+footer img {
+  float: right 0 100px 0 0;
+}
+
+.item {
+  text-align: center;
+  background: radial-gradient(circle, #f0ab6e, #f5c79f);
+  border: 2px solid #eb3e13;
+  border-radius: 20px;
+}
+h2 {
+  font-family: 'Dancing script', cursive;
+  color: #c4721f
+}
+
+#overlayZB, #overlayBox,
+  #overlayIndivid {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Dancing script', cursive;
+  }
+
+  #formContainer {
+    position: fixed;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #formContainer h3 {
+    text-align: center;
+    font-size: 3vh;
+    font-weight: normal;
+    font-family: 'Dancing script', cursive;
+  }
+
+  label {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #ed8b37;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Dancing script', cursive;
+  }
+
+  #quantityB {
+    width: 20%;
+    height: 5%;
+    font-size: 2vh;
+    font-family: 'Dancing script', cursive;
+  }
+
+  #quantityZB, #quantityBox,
+  #quantityIndivid {
+    text-align: center;
+  }
+
+
+@media(min-width: 1080px) {
+   header div {
+    height: 100vh;
+    margin-bottom: 5vh;
+  }
+
+  footer div {
+    margin-top: 20%;
+  }
+
+  footer div a {
+    font-size: 20px;
+  }
+
+  footer img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    margin-top: 20%;
+  }
+
+  .item {
+    margin-top: 5vh;
+    padding: 20px;
+    height: 80vh;
+  }
+
+  .item img {
+    margin-top: 10%;
+    border-radius: 15px;
+    width: 85%;
+    height: 70%;
+  }
+
+ #formContainer {
+    height: 90%;
+  }
+
+  #formContainer h3 {
+    font-size: 3vh;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    padding: 8px;
+    margin-bottom: 2.5%;
+  }
+
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #008CBA;
+  }
+
+  p {
+    margin-top: 1%;
+  }
+
+  button {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 30%;
+    height: 5%;
+    font-size: 100%;
+  }
+
+
+
+  #quantityZB, #quantityBox,
+  #quantityIndivid {
+    width: 30%;
+  }
+
+  #submit,
+  #close,#individ {
+    width: 100%;
+    height: 5%;
+    font-size: 100%;
+    font-family: 'Dancing script', cursive;
+  }
+
+}
+
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #008CBA;
+}
+
+
+button.quantityBtn:hover {
+  background-color: #005F6B;
+}
+
+@media(min-width: 760px) and (max-width:1080px) {
+  header div {
+    height: 90vh;
+    margin-bottom: 3vh;
+  }
+
+  footer div {
+    margin-top: 100vh;
+  }
+
+  footer div a {
+    font-size: 16px;
+  }
+
+  footer img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7.5%;
+    margin-top: 15%;
+  }
+
+  .item {
+    margin-top: 3vh;
+    margin-left: 2vh;
+    height: 110%;
+    width: auto;
+  }
+
+  .item img {
+    margin-top: 3%;
+    border-radius: 15px;
+    width: 65%;
+    height: 70%;
+  }
+
+
+  
+
+  #formContainer {
+    width: 30%;
+  }
+
+ 
+  #formContainer h3 {
+    margin-bottom: 0.25vh;
+    margin-top: 0.25vh;
+  }
+
+
+  label {
+    margin-bottom: 1%;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    margin-bottom: 3%;
+  }
+
+  p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+ 
+
+  button {
+    margin-bottom: 4%;
+    width: 40%;
+    height: 7.5%;
+    font-size: 125%;
+  }
+
+
+  
+  #quantityZB, #quantityBox,
+  #quantityIndivid {
+    width: 10vh;
+  }
+
+  #submit,
+  #close,
+  #individ {
+    width: auto;
+    height: auto;
+    font-size: 2vh;
+    font-family: 'Dancing script', cursive;
+  }
+
+
+}
+
+@media(min-width: 360px) and (max-width: 760px) {
+
+header div {
+    height: 70vh;
+    margin-bottom: 3vh;
+  }
+
+  main {
+    margin-bottom: 100%;
+  }
+
+  footer div {
+    margin-top: 280%;
+  }
+
+
+  footer div a {
+    font-size: 14px;
+  }
+
+  footer img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5%;
+    margin-top: 40%;
+  }
+
+  .item {
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 80vh;
+    width: 60vh;
+  }
+
+  .item img {
+    margin-top: 5%;
+    border-radius: 15px;
+    width: 80%;
+    height: 70%;
+  }
+
+h2 {
+  margin-bottom: 1%;
+  }
+
+#formContainer {
+    width: 50%;
+    height: 87%;
+  }
+
+ #formContainer h3 {
+    font-size: 150%;
+    margin-top: 1%;
+  }
+
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    padding: 8px;
+    margin-bottom: 1%;
+    width: 100%;
+  }
+
+  input[type="number"]{
+    width: 40%;
+  }
+  button {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 50%;
+    height: 7.5%;
+    font-size: 125%;
+  }
+
+
+  #quantityB {
+    width: 25%;
+    font-size: 70%;
+  }
+
+  
+
+  #overlayZB, #overlayBox,
+  #overlayIndivid {
+    width: 50%;
+  }
+  #submit,
+  #close {
+    width: 75%;
+    height: 5%;
+    font-size: 90%;
+    font-family: 'Dancing script', cursive;
+  }
+
+  #individ {
+    width: 90%;
+    height: 5%;
+    font-size: 90%;
+    font-family: 'Dancing script', cursive;
+  }
+}

@@ -1,0 +1,39 @@
+.wrapper {
+    width: 80%;
+    margin: 5% auto;
+    position: relative;
+}
+
+.slider {
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.slider-line {
+    display: flex;
+    transition: all ease 1s;
+}
+
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.slider-prev {
+    left: -50px;
+    font-size: 60px;
+    color: #eb3e13;
+}
+
+.slider-next {
+    right: -50px;
+    font-size: 60px;
+    color: #eb3e13;
+}
