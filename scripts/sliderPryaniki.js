@@ -10,7 +10,7 @@ function initPryaniki() {
         item.style.width = widthPryaniki + 'px';
         item.style.height = 50 + 'vh';
     })
-    rollSliderPryaniki();
+    rollSliderPryaniki(); 
 }
 window.addEventListener('resize', initPryaniki);
 initPryaniki();
@@ -30,11 +30,6 @@ function nextSlidePryaniki() {
 }
 
 setInterval(nextSlidePryaniki, 3000);
-
-
-
-
-
 
 const imagesZephir = document.querySelectorAll('.wrapperZephir .slider-line-Zephir img');
 const sliderLineZephir = document.querySelector('.slider-line-Zephir');
