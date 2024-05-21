@@ -7,7 +7,7 @@
     <title>OLALA Вкусная страна</title>
     <link rel="stylesheet" href="../styles/zephir.css" />
     <script type="text/javascript" src="../scripts/pryaniki.js"></script>
-    <link rel="shortcut icon" href="../Project/media/ICON.svg">
+    <link rel="icon" href="/media/ICON.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -26,13 +26,13 @@
                     <div id="formContainer">
                         <h3>Зефирный букет</h3><br>
                         <label for="name">Ваше имя:</label>
-                        <input type="text" id="name" name="name"><br>
+                        <input type="text" id="name" name="name" required><br>
 
                         <label for="phone">Ваш номер телефона:</label>
-                        <input type="text" id="phone" /><br><br>
+                        <input type="text" id="phone" required><br><br>
 
                         <label for="destination">Куда отправлять:</label>
-                        <input type="text" id="destination" /><br><br>
+                        <input type="text" id="destination" required><br><br>
 
                         <label for="quantity">Количество:</label>
                         <button onclick="decrementQuantity('quantityZB', 'priceZB', 15)" id="quantityB">-</button>
@@ -41,18 +41,18 @@
                         <button onclick="incrementQuantity('quantityZB', 'priceZB', 15)" id="quantityB">+</button>
 
                         <label for="date">Срок сдачи:</label>
-                        <input type="date" id="birthdayDate" /><br>
+                        <input type="date" id="birthdayDate" required><br>
 
                         <label for="comment">Комментарий к заказу:</label>
                         <textarea id="comment"></textarea><br>
 
                         <p id="priceZB">Текущая стоимость заказа: 15 рублей</p>
 
-                        <button onclick="document.getElementById('overlayZB').style.display = 'none'"
+                        <button onclick="validateIndivid('overlayZB')"
                             id="submit">Подтвердить заказ</button>
                         <button onclick="document.getElementById('overlayZB').style.display = 'none'"
                             id="close">Закрыть</button><br>
-                        <button onclick="setCustomPrice('priceZB')" id="individ">Индивидуальный заказ</button>
+                        <button onclick="setCustomPrice('priceZB');requiredIndivid('overlayZB')" id="individ">Индивидуальный заказ</button>
                     </div>
                 </div>
             </div>
@@ -67,13 +67,13 @@
                     <div id="formContainer">
                         <h3>Зефирная коробочка</h3><br>
                         <label for="name">Ваше имя:</label>
-                        <input type="text" id="name" name="name"><br>
+                        <input type="text" id="name" name="name" required><br>
 
                         <label for="phone">Ваш номер телефона:</label>
-                        <input type="text" id="phone" /><br><br>
+                        <input type="text" id="phone" required><br><br>
 
                         <label for="destination">Куда отправлять:</label>
-                        <input type="text" id="destination" /><br><br>
+                        <input type="text" id="destination" required><br><br>
 
                         <label for="quantity">Количество:</label>
                         <button onclick="decrementQuantity('quantityBox', 'priceBox', 15)" id="quantityB">-</button>
@@ -82,18 +82,18 @@
                         <button onclick="incrementQuantity('quantityBox', 'priceBox', 15)" id="quantityB">+</button>
 
                         <label for="date">Срок сдачи:</label>
-                        <input type="date" id="birthdayDate" /><br>
+                        <input type="date" id="birthdayDate" required><br>
 
                         <label for="comment">Комментарий к заказу:</label>
                         <textarea id="comment"></textarea><br>
 
                         <p id="priceBox">Текущая стоимость заказа: 15 рублей</p>
 
-                        <button onclick="document.getElementById('overlayBox').style.display = 'none'"
+                        <button onclick="validateIndivid('overlayBox')"
                             id="submit">Подтвердить заказ</button>
                         <button onclick="document.getElementById('overlayBox').style.display = 'none'"
                             id="close">Закрыть</button>
-                        <button onclick="setCustomPrice('priceBox')" id="individ">Индивидуальный заказ</button>
+                        <button onclick="setCustomPrice('priceBox');requiredIndivid('overlayBox')" id="individ">Индивидуальный заказ</button>
                     </div>
                 </div>
             </div>
@@ -102,36 +102,30 @@
                 <h2>Индивидуальный заказ</h2>
                 <img src="../media/zephir_pelm.jpg">
 
-                <button onclick="showOrderForm('overlayIndivid', 'priceIndivid', 'договорная', 'quantityIndivid')"
+                <button onclick="showOrderForm('overlayIndivid', 'priceIndivid', 'договорная', 'quantityIndivid');requiredIndivid('overlayIndivid')"
                     id="button">Заказать</button>
                 <div id="overlayIndivid">
                     <div id="formContainer">
                         <h3>Индивидуальный заказ</h3><br>
                         <label for="name">Ваше имя:</label>
-                        <input type="text" id="name"><br>
+                        <input type="text" id="name" required><br>
 
                         <label for="phone">Ваш номер телефона:</label>
-                        <input type="text" id="phone"><br><br>
+                        <input type="text" id="phone" required><br><br>
 
                         <label for="destination">Куда отправлять:</label>
-                        <input type="text" id="destination"><br><br>
+                        <input type="text" id="destination" required><br><br>
 
-                        <label for="quantity">Количество:</label>
-                        <button onclick="decrementQuantity('quantityIndivid', 'priceIndivid', 'договорная')"
-                            id="quantityB">-</button>
-                        <input type="number" id="quantityIndivid" value="1">
-                        <button onclick="incrementQuantity('quantityIndivid', 'priceIndivid', 'договорная')"
-                            id="quantityB">+</button>
 
                         <label for="date">Срок сдачи:</label>
-                        <input type="date" id="birthdayDate"><br>
+                        <input type="date" id="birthdayDate" required><br>
 
                         <label for="comment">Комментарий к заказу:</label>
                         <textarea id="comment"></textarea><br>
 
                         <p id="priceIndivid">Стоимость заказа: договорная</p>
 
-                        <button onclick="document.getElementById('overlayIndivid').style.display = 'none'"
+                        <button onclick="validateIndivid('overlayIndivid')"
                             id="submit">Подтвердить заказ</button>
                         <button onclick="document.getElementById('overlayIndivid').style.display = 'none'"
                             id="close">Закрыть</button>
