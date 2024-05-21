@@ -7,6 +7,9 @@ body {
   line-height: 30%;
 }
 
+header, footer{
+  width: 100%;
+}
 header div {
   background-image: url("../media/logo1.jpeg");
   margin: -8px;
@@ -16,7 +19,6 @@ header div {
 }
 
 footer div {
-  width: 100.5%;
   padding-left: 10px;
   margin: -8px;
   margin-top: 20%;
@@ -40,7 +42,7 @@ footer a img {
 a span {
   font-size: 20px;
   font-family: 'Dancing script', cursive;
-  color: #c4721f;
+  color: #f3b373;
   vertical-align: auto;
   margin-left: auto;
 }
@@ -50,7 +52,7 @@ footer p {
   text-align: center;
   font-family: 'Dancing script', cursive;
   font-size: 160%;
-  color: #c4721f;
+  color: #f3b373;
 }
 
 h1 {
@@ -76,7 +78,6 @@ h1 {
   margin-right: auto;
 }
 
-
 h2 {
   text-align: center;
   font-family: 'Dancing script', cursive;
@@ -91,7 +92,10 @@ a {
   text-align: center;
   font-family: 'Dancing script', cursive;
   color: #c4721f;
+  margin-bottom: 5%;
+  margin-left: 5%;
 }
+
 
 .h3 {
   text-align: center;
@@ -100,7 +104,6 @@ a {
   margin-top: 5%;
   margin-left: 5%;
 }
-
 
 @media(min-width: 1080px) {
 
@@ -117,25 +120,28 @@ a {
     width: 45%;
   }
 
+ 
+
   h2 {
-    font-size: 45px;
+    font-size: 30px;
     margin-bottom: 10%;
   }
 
-
+  .pryaniki img,
+  .zephir img{
+    height: 80%;
+  }
 
   .h2 {
-    font-size: 35px;
+    font-size: 40px;
+    margin-top: 110px;
   }
 
   .h3 {
     font-size: 30px;
   }
 
-
-
 }
-
 
 @media (min-width: 760px) and (max-width: 1080px) {
   header div {
@@ -167,9 +173,8 @@ a {
   }
 
 
-
   .h2 {
-    font-size: 35px;
+    font-size: 45px;
   }
 
   .h3 {
@@ -183,10 +188,6 @@ a {
     margin-bottom: 5vh;
   }
 
-  .container {
-    display: block;
-
-  }
 
   h1 {
     font-size: 50px;
@@ -203,11 +204,14 @@ a {
 
   }
 
-  h2 {
-    font-size: 40px;
-    margin-bottom: 10%;
+  .container{
+    display: block;
   }
 
+  h2 {
+    font-size: 35px;
+    margin-bottom: 10%;
+  }
 
 
   .h2 {
@@ -215,6 +219,6 @@ a {
   }
 
   .h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }

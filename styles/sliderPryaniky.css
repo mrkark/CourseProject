@@ -32,6 +32,11 @@
         width: 80%;
         height: 30%;
     }
+
+    .slider-line-Pryaniki img, .slider-line-Zephir img {
+        margin-bottom: auto;
+        border-radius: 5%;
+    }
 }
 
 
@@ -42,13 +47,22 @@
         width: 75%;
         height: 30%;
     }
+
+    .slider-line-Pryaniki img, .slider-line-Zephir img {
+        margin-bottom: auto;
+        border-radius: 5%;
+    }
 }
 
 @media (min-width: 360px) and (max-width: 760px) {
-
     .wrapperPryaniki,
     .wrapperZephir {
         width: 70%;
         height: 30%;
+    }
+    
+    .slider-line-Pryaniki img, .slider-line-Zephir img {
+        margin-bottom: auto;
+        border-radius: 5%;
     }
 }
